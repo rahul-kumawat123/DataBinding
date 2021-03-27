@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Data Binding</string>
+    <string name="enter_details">Enter Details</string>
+    <string name="enter_name_here">Enter Name Here</string>
+    <string name="enter_address_here">Enter Address Here</string>
+    <string name="_1_way_databinding">1-way DataBinding</string>
+    <string name="_2_way_databinding">2-way DataBinding</string>
+</resources>

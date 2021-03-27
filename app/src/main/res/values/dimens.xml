@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="heading_tv_width">290dp</dimen>
+    <dimen name="heading_tv_height">79dp</dimen>
+    <dimen name="name_et_width">250dp</dimen>
+    <dimen name="address_et_width">250dp</dimen>
+    <dimen name="labelName_tv_width">107dp</dimen>
+    <dimen name="labelName_tv_height">43dp</dimen>
+    <dimen name="labelAddress_tv_width">107dp</dimen>
+    <dimen name="labelAddress_tv_height">48dp</dimen>
+    <dimen name="name_tv_width">178dp</dimen>
+    <dimen name="name_tv_height">55dp</dimen>
+    <dimen name="address_tv_width">178dp</dimen>
+    <dimen name="address_tv_height">55dp</dimen>
+    <dimen name="one_way_dataBinding_tv_width">131dp</dimen>
+    <dimen name="one_way_dataBinding_tv_height">66dp</dimen>
+    <dimen name="two_way_dataBinding_tv_width">143dp</dimen>
+    <dimen name="two_way_dataBinding_tv_height">66dp</dimen>
+</resources>

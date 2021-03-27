@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+       <variable
+           name="employee"
+           type="com.example.databinding.EmployeeModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="@dimen/heading_tv_width"
+            android:layout_height="@dimen/heading_tv_height"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="@string/enter_details"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.076" />
+
+        <EditText
+            android:id="@+id/nameEditText"
+            android:layout_width="@dimen/name_et_width"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_name_here"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintVertical_bias="0.043" />
+
+        <EditText
+            android:id="@+id/addressEditText"
+            android:layout_width="@dimen/address_et_width"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_address_here"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameEditText"
+            app:layout_constraintVertical_bias="0.04" />
+
+        <TextView
+            android:id="@+id/labelName"
+            android:layout_width="@dimen/labelName_tv_width"
+            android:layout_height="@dimen/labelName_tv_height"
+            android:layout_marginTop="64dp"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:text="@{employee.empName}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.21"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addressEditText"
+            app:layout_constraintVertical_bias="0.143" />
+
+        <TextView
+            android:id="@+id/labelAddress"
+            android:layout_width="@dimen/labelAddress_tv_width"
+            android:layout_height="@dimen/labelAddress_tv_height"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:text="@{employee.empAddress}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.21"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelName"
+            app:layout_constraintVertical_bias="0.068" />
+
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="@dimen/name_tv_width"
+            android:layout_height="@dimen/name_tv_height"
+            android:layout_marginTop="64dp"
+            android:gravity="center"
+            android:text="@{nameEditText.text}"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/labelName"
+            app:layout_constraintTop_toBottomOf="@+id/addressEditText"
+            app:layout_constraintVertical_bias="0.114" />
+
+        <TextView
+            android:id="@+id/addressTextView"
+            android:layout_width="@dimen/address_tv_width"
+            android:layout_height="@dimen/address_tv_height"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:text="@{addressEditText.text}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/labelAddress"
+            app:layout_constraintTop_toBottomOf="@+id/nameTextView"
+            app:layout_constraintVertical_bias="0.101" />
+
+        <TextView
+            android:id="@+id/one_way_dataBinding"
+            android:layout_width="@dimen/one_way_dataBinding_tv_width"
+            android:layout_height="@dimen/one_way_dataBinding_tv_height"
+            android:gravity="center"
+            android:text="@string/_1_way_databinding"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/labelName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.211"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addressEditText"
+            app:layout_constraintVertical_bias="0.398" />
+
+        <TextView
+            android:id="@+id/two_way_dataBinding"
+            android:layout_width="@dimen/two_way_dataBinding_tv_width"
+            android:layout_height="@dimen/two_way_dataBinding_tv_height"
+            android:gravity="center"
+            android:text="@string/_2_way_databinding"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/nameTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.41"
+            app:layout_constraintStart_toEndOf="@+id/one_way_dataBinding"
+            app:layout_constraintTop_toBottomOf="@+id/addressEditText"
+            app:layout_constraintVertical_bias="0.537" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
